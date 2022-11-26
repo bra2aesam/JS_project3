@@ -1,0 +1,215 @@
+/*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url(./img/back1.jpg);
+    background-size: cover;
+
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    width: 90px;
+    /* width: 280px; */
+    background: #d79f03;
+    overflow: hidden;
+    transition: .5s;
+}
+
+nav:hover {
+    width: 280px;
+    transition: .5s;
+}
+
+.logo {
+    text-align: center;
+    display: flex;
+    margin: 10px 0 0 10px;
+    padding-bottom: 3rem;
+}
+.logo img{
+    width:45px;
+}
+
+.logo span {
+    font-weight: bold;
+    /* padding-left:px; */
+    font-size: 20px;
+    /* text-transform: uppercase; */
+}
+
+.fa-circle-check {
+    font-size: 400%;
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+a {
+    position: relative;
+    width: 280px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    display: table;
+    padding: 10px;
+}
+
+nav .fas {
+    position: relative;
+    width: 70px;
+    height: 50px;
+    top: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-item {
+    position: relative;
+    top: 10px;
+    margin-left: 10px;
+}
+
+a:hover {
+    background: rgb(177, 161, 161);
+}
+
+a:hover .fas {
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.logout {
+    position: absolute;
+    bottom: 0;
+}
+
+.container {
+    display: flex;
+}
+
+/*/////////////// -- text -- //////////// */
+.welcometext {
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.welcometext h1{
+    
+    font-family: 'Yeseva One', cursive;
+    line-height: 100%;
+    font-size: 500%;
+    
+}
+.welcometext .our {
+    font-family: 'Yeseva One', cursive;
+    
+
+}
+
+.welcometext .websitename{
+    font-family: 'Kalam', cursive;
+    font-size: 150%;
+    padding-left: 10px;
+    padding-top: 90%;
+    color: #d79f03;
+}
+.btnregis{
+    margin: 2% auto;
+    padding: 5px ;
+    background:linear-gradient(90deg,#c89a01, #fcdd55) ;
+    width: 20%;
+    color: #000000;
+    font-size:200%;
+    font-weight: 600;
+    border-radius: 700px;
+    text-align: center;
+    transition: 1s;
+    cursor: pointer;  
+    overflow: hidden;
+}
+
+
+.btnregis:hover {
+    transition:  .4s;
+    background:linear-gradient(90deg,#fcdd55, #c89a01) ;
+    
+}
+
+.aboutus{
+    margin: 2% auto;
+    width: 50%;
+    text-align: center;
+    
+}
+/* /////////////////////// */
+/* ///-- footer --//// */
+.footer{
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 12vh;
+    background-color: #031012;
+  box-shadow: 0 0 40px rgb(244, 235, 205);
+  opacity: 0.8;
+    backdrop-filter: blur(10px);
+}
+.support{
+
+    padding-top: 1%;
+}
+
+
+.fa-square-phone{
+    padding-left: 1%;
+}
+
+.fa-envelope {
+    padding-left: 1%;
+    
+}
+
+.support #at{
+    color: #efc437;
+}
+/* ////////// */
+
+@media (max-width:992px){
+    .btnregis {
+        font-size: 90%;
+        
+    }
+    nav:hover {
+        width: 0px;
+        transition: 1s;
+    }
+    
+}
+@media (max-width:768px){
+.btnregis {
+    font-size: 60%;
+
+}
+nav:hover {
+    width: 0px;
+    transition: 1s;
+}
+
+}
+

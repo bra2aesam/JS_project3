@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Allura&family=Berkshire+Swash&family=Carter+One&family=Caveat&family=Courgette&family=Damion&family=Dancing+Script:wght@400;700&family=Kalam:wght@300&family=Lobster&family=Lobster+Two&family=Oleo+Script&family=Pacifico&family=Parisienne&family=Playfair+Display&family=Sacramento&family=Satisfy&family=Shadows+Into+Light&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="homeAfter.css">
+    <title>Home page</title>
+    <link rel="icon" href="../img/logo.png">
+    <script src="https://kit.fontawesome.com/98bf175dbe.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+<!-- //////////////////////////////////////////Sid Navbar-item/////////////////////////////////////////////////// -->
+  <div class="container">
+    <nav>
+        <ul>
+            <li><a href="#" class="logo">
+                    <img id="navimage">
+                    <span class="nav-item" id="tr_name"></span>
+                </a></li>
+            <li id="home" onclick="move(id)"><a href="#">
+                    <i class="fas fa-solid fa-house-user"></i>
+                    <span class="nav-item">Home page</span>
+                </a></li>
+
+            <li id="profile" onclick="move(id)"><a href="#">
+                    <!-- <i class="fas fa-comment"></i> -->
+                    <i class="fas fa-solid fa-user"></i>
+
+                    <span class="nav-item">My Profile</span>
+                </a></li>
+
+            <li id="student" onclick="move(id)"><a href="#">
+                <i class="fas fa-solid fa-list-check"></i>
+                <span class="nav-item">Attendance</span>
+                </a></li>
+
+            <li id="feedback" onclick="move(id)"><a href="#">
+                    <i class="fas fa-solid fa-comments"></i>
+                    <span class="nav-item">Feadback</span>
+                </a></li>
+                <li id="" onclick="move(id)"><a href="../students/students.html">
+                    <i class="fas fa-solid fa-graduation-cap"></i>
+                    <span class="nav-item">Students</span>
+                </a></li>
+
+            <!-- <li><a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span class="nav-item">Setting</span>
+                </a></li> -->
+
+            <li id="out" onclick="move(id)"><a href="#" class="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-item">Log out</span>
+                </a></li>
+        </ul>
+    </nav>
+  <!-- //////////////////////////////////////////////////////////////////// -->
+
+ <!-- /////////////////////////////--homepage#1--//////////////////////////////// -->
+ <div id="homepage">
+    <div id="backgcolor" class="backgcolor">
+        <!-- welcome -->
+        <div class="welcometext">
+             <h1><button type="submit" class="btnregis"></button>Welcome<button type="submit" class="btnregis"> </button>
+               <h2 id="coachname"> </h2></h1>
+          </div>
+
+    </div> <!-- background -->
+
+
+ 
+
+
+    <!-- slider -->
+    <div id="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <div id="slides">
+            <div id="overflow">
+                <div class="inner">
+                    <div class="slide slide_1">
+                        <div class="slide-content">
+                            <h2>News 1</h2>
+                            <p>In cooperation with ASEZA and the Orange Company, all second Cohort  of Aqaba students are employed.</p>
+                        </div>
+                    </div>
+                    <div class="slide slide_2">
+                        <div class="slide-content">
+                            <h2>News 2</h2>
+                            <p>The employment rate for Orange Academy graduates has reached 80%.</p>
+                        </div>
+                    </div>
+                    <div class="slide slide_3">
+                        <div class="slide-content">
+                            <h2>News 3</h2>
+                            <p>The presence of the director Salama Yassin and Hadeel Al-Shahwan in Aqaba to work evaluation for the students of Aqaba cohort.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slide slide_4">
+                        <div class="slide-content">
+                            <h2>News 4</h2>
+                            <p>Next week, coach Alaa Al-Amayreh will be sent to Simplon in France.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+        </div>
+        <div id="bullets">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+        </div>
+       
+    </div> <!-- div container for card -->
+    </div>
+    </div>
+    <div class="footer">
+        <div class="support">
+          <span>contact support:</span>
+          <i class="fa-solid fa-square-phone"></i> +9627777777 & <i class="fa-solid fa-envelope"></i>   coachtick@gmail.com
+        <p>Copyright <span id="at">@CoachTick </span> all right reserved</p>
+      </div>
+      </div>
+      <!-- /////////////////// -->
+      
+      <script>
+        function regis() {
+          window.location.href = "./register/register.html"
+        }
+     
+
+    // currentuser={ "firstName": 'Mona', "lastName": 'Saleh', "Email": 'amarya@gmail.com', "confirmEmail":'amarya@gmail.com', "mobile": '0792222222', "Password": '077755588', "confirmPassword": '077755588' };
+
+    // localStorage.setItem('currentuser' , JSON.stringify(currentuser))
+    let coach=JSON.parse( localStorage.getItem('currentuser'))
+    console.log(coach.firstName);
+    let ooo=coach.firstName
+    // console.log(ooo.toUpperCase(),"(coach.firstName).toUpperCase");
+    document.getElementById('coachname').innerHTML=coach.firstName.toUpperCase()+' '+coach.lastName.toUpperCase()
+    switch (coach.firstName){
+    case("Mona") : document.getElementById("navimage").src = "../img/mona.png"
+    break;
+    case("Alaa") : document.getElementById("navimage").src = "../img/alaa.png"
+    break;
+    case("hadeel") : document.getElementById("navimage").src = "../img/hadee.png"
+    break;
+    case("Salama") : document.getElementById("navimage").src = "../img/salama.png"
+    break;
+    default:document.getElementById("navimage").src = "../img/defaultimages.png"        
+   break;
+}
+document.getElementById("tr_name").innerHTML = coach.firstName;
+function move(ss){
+    if (ss == "home") {
+        window.location.href = "./homeAfter.html"
+    } else if (ss == "profile") {
+        window.location.href = "../Profile/profile.html"
+    } else if (ss == "student") {
+        window.location.href = "../attendance/attendance.html"
+    } else if (ss == "feedback") {
+        window.location.href = "../FeedBackSection/index1.html"
+    } else if (ss == "out") {
+        window.location.href = "../index.html"
+    }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Allura&family=Berkshire+Swash&family=Carter+One&family=Caveat&family=Courgette&family=Damion&family=Dancing+Script:wght@400;700&family=Kalam:wght@300&family=Lobster&family=Lobster+Two&family=Oleo+Script&family=Pacifico&family=Parisienne&family=Playfair+Display&family=Sacramento&family=Satisfy&family=Shadows+Into+Light&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./homeBefor.css">
+    <link rel="icon" href="./img/logo.png">
+    <title>welcome</title>
+    <script src="https://kit.fontawesome.com/98bf175dbe.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- //////////////////////////////////////////Sid Navbar-item/////////////////////////////////////////////////// -->
+  <div class="container">
+
+    <nav>
+      <ul>
+        <li><a href="#" class="logo">
+          <img src="./img/logo.png">
+          <span class="nav-item">CoachTick</span>
+      </a></li>
+
+        <li><a href="#">
+          <i onclick="regis()" class="fas fa-solid fa-user-plus"></i>
+          <span onclick="regis()" class="nav-item">Registration</span>
+        </a></li>
+
+        <li><a href="#">
+          <i onclick="regis()" class="fas fa-solid fa-right-to-bracket"></i>
+      
+          <span onclick="regis()" class="nav-item">Login</span>
+        </a></li>
+       
+      </ul>
+    </nav>
+<!-- //////////////////////////////////////////////////////////////////// -->
+<div class="welcometext">
+  <h1>Welcome
+     <h2><span class="our">to our</span> <span class="websitename">CoachTick</span></h2></h1>
+  <div class="aboutus">This website keep track of working hours, in addition to tracking required tasks and following up on the status of tasks that have not yet been completed. It allows providing feedback to each student in an easy and modern way.</div>
+
+  
+  
+  <button type="submit" class="btnregis" onclick="regis()">Registration</button>
+  
+</div>
+
+
+</div>
+<div class="footer">
+  <div class="support">
+    <span>contact support:</span>
+    <i class="fa-solid fa-square-phone"></i> +9627777777 & <i class="fa-solid fa-envelope"></i>   coachtick@gmail.com
+  <p>Copyright <span id="at">@CoachTick </span> all right reserved</p>
+</div>
+</div>
+<script>
+  function regis() {
+    window.location.href = "./register/register.html"
+  }
+</script>
+</body>
+</html>

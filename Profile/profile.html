@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Allura&family=Berkshire+Swash&family=Carter+One&family=Caveat&family=Courgette&family=Damion&family=Dancing+Script:wght@400;700&family=Kalam:wght@300&family=Lobster&family=Lobster+Two&family=Oleo+Script&family=Pacifico&family=Parisienne&family=Playfair+Display&family=Sacramento&family=Satisfy&family=Shadows+Into+Light&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="profile.css">
+    <script src="https://kit.fontawesome.com/98bf175dbe.js" crossorigin="anonymous"></script>
+    <title>Profile</title>
+    <link rel="icon" href="../img/logo.png">
+</head>
+
+<body>
+    <!-- //////////////////////////////////////////Sid Navbar-item/////////////////////////////////////////////////// -->
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#" class="logo"> 
+                        <img id="imgg">
+                        <span class="nav-item" id="namee"></span>
+                     </a></li>
+                <li id="home" onclick="move(id)"><a href="#">
+                        <i class="fas fa-solid fa-house-user"></i>
+                        <span class="nav-item">Home page</span>
+                    </a></li>
+
+                <li id="profile" onclick="move(id)"><a href="#">
+                        <!-- <i class="fas fa-comment"></i> -->
+                        <i class="fas fa-solid fa-user"></i>
+
+                        <span class="nav-item">My Profile</span>
+                    </a></li>
+
+                <li  id="student" onclick="move(id)"><a href="#">
+                    <i class="fas fa-solid fa-list-check"></i>
+                    <span class="nav-item">Attendance</span>
+                    </a></li>
+
+                <li id="feedback" onclick="move(id)"><a href="#">
+                        <i class="fas fa-solid fa-comments"></i>
+                        <span class="nav-item">Feadback</span>
+                    </a></li>
+                    <li id="" onclick="move(id)"><a href="../students/students.html">
+                        <i class="fas fa-solid fa-graduation-cap"></i>
+                        <span class="nav-item">Students</span>
+                    </a></li>
+
+
+                <li id="out" onclick="move(id)"><a href="#" class="logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="nav-item">Log out</span>
+                    </a></li>
+            </ul>
+        </nav>
+        <div class="Profile">
+            <div class="coachProfile">
+                <div class="imageprofile">
+                    <img src="" alt="NOIMAGE" id="image">
+                    <div class="line"></div>
+                    <h3 id="name"></h3>
+                </div>
+            </div>
+            <div class="CoachDetails">
+                <div class="textAboutMe">
+                    <h3>About Me<button type="submit" class="edi" onclick="editbio()">Edit</button></h3>
+                    <div class="line"></div>
+                    <div id="biocontainer">
+                        <p id="bioparagraph"></p>
+                        <input type="text" id="inpbio" class="hidetbio inpbio showbio">
+                        <button type="submit" onclick="savebio()" class="hidetbio showbio" id="savebutton">Save</button>
+                        
+                    </div>
+                    
+                    
+                </div>
+                <div class="line2"></div>
+                
+                <div class="textemail">
+                    <!-- <div class="line"></div> -->
+                    <h3>Email : <span id="email"></span></h3>
+                    <div class="line"></div>
+                </div>
+                <div class="line2"></div>
+                <div class="textphone">
+                    <!-- <div class="line"></div> -->
+                    <h3>Phone :<span id="phone"></span></h3>
+                    
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div><!-- div container -->
+    <div class="footer">
+        <div class="support">
+          <span>contact support:</span>
+          <i class="fa-solid fa-square-phone"></i> +9627777777 & <i class="fa-solid fa-envelope"></i>   coachtick@gmail.com
+        <p>Copyright <span id="at">@CoachTick </span> all right reserved</p>
+      </div>
+      </div>
+      <!-- /////////////////// -->
+      
+      <script>
+        function editbio(){
+           arr= document.getElementsByClassName('showbio')
+           arr=[...arr]
+           arr.forEach(element => {
+               element.classList.toggle('hidetbio')
+               console.log(element);
+            
+           });
+        }
+        function savebio(){
+         let infosave=document.getElementById('inpbio').value
+            document.getElementById('bioparagraph').innerHTML=infosave
+            arr= document.getElementsByClassName('showbio')
+           arr=[...arr]
+           arr.forEach(element => {
+               element.classList.toggle('hidetbio')
+               console.log(element);
+           });
+           let curentuseredited=(JSON.parse(localStorage.getItem('currentuser')))
+           curentuseredited.bio=infosave
+
+           localStorage.setItem('currentuser', JSON.stringify(curentuseredited))
+           let apdate = (JSON.parse(localStorage.getItem('users'))).map(function(user){
+            if(curentuseredited.Email == user.Email){
+                user.bio=curentuseredited.bio
+                return user
+                console.log(user);
+            }
+            return user
+        
+           })
+           localStorage.setItem('users', JSON.stringify(apdate))
+
+        }
+
+
+        document.getElementById('bioparagraph').innerHTML=(JSON.parse(localStorage.getItem('currentuser'))).bio
+        function regis() {
+          window.location.href = "./register/register.html"
+        }
+        let portfolio=JSON.parse(localStorage.getItem('currentuser'))
+        document.getElementById('name').innerHTML=portfolio.firstName+' '+portfolio.lastName
+        document.getElementById('email').innerHTML=portfolio.Email
+        document.getElementById('phone').innerHTML=portfolio.mobile
+        switch(portfolio.firstName){
+            case "Mona":
+            document.getElementById("image").src = "../img/mona.png"
+            break;
+            case "Alaa":
+            document.getElementById("image").src = "../img/alaa.png"
+            break;
+            case "Salama":
+            document.getElementById("image").src = "../img/salama.png"
+            break;
+            case "hadeel":
+            document.getElementById("image").src = "../img/hadee.png"
+            break;
+            default:document.getElementById("image").src = "../img/defaultimages.png"        
+            break;
+        }
+        function move(ss){
+    if (ss == "home") {
+        window.location.href = "../homeAfter/homeAfter.html"
+    } else if (ss == "profile") {
+        window.location.href = "./profile.html"
+    } else if (ss == "student") {
+        window.location.href = "../attendance/attendance.html"
+    } else if (ss == "feedback") {
+        window.location.href = "../FeedBackSection/index1.html"
+    } else if (ss == "out") {
+        window.location.href = "../index.html"
+    }
+}
+switch(portfolio.firstName){
+            case "Mona":
+            document.getElementById("imgg").src = "../img/mona.png"
+            break;
+            case "Alaa":
+            document.getElementById("imgg").src = "../img/alaa.png"
+            break;
+            case "Salama":
+            document.getElementById("imgg").src = "../img/salama.png"
+            break;
+            case "hadeel":
+            document.getElementById("imgg").src = "../img/hadee.png"
+            break;
+            default:document.getElementById("imgg").src = "../img/defaultimages.png"        
+   break;
+            
+        }
+        document.getElementById("namee").innerHTML=portfolio.firstName
+
+
+console.log(portfolio);
+    </script>
+</body>
+
+</html>

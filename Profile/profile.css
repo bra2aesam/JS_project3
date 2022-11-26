@@ -1,0 +1,319 @@
+/*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url(../img/backprofile.jpg);
+    width: 100%;
+    /* background-size: cover; */
+
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    width: 90px;
+    /* width: 280px; */
+    background: #d79f03;
+    overflow: hidden;
+    transition: 2s;
+}
+
+nav:hover {
+    width: 280px;
+    transition: 1s;
+}
+
+.logo {
+    text-align: center;
+    display: flex;
+    margin: 10px 0 0 0px;
+    padding-bottom: 3rem;
+}
+.logo img{
+    width: 45px;
+    height: 45px;
+    border-radius:50%;
+  }
+
+.logo span {
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.fa-circle-check {
+    font-size: 400%;
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+a {
+    position: relative;
+    width: 280px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    display: table;
+    padding: 10px;
+}
+
+nav .fas {
+    position: relative;
+    width: 70px;
+    height: 50px;
+    top: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-item {
+    position: relative;
+    top: 10px;
+    margin-left: 10px;
+}
+
+a:hover {
+    background: rgb(177, 161, 161);
+}
+
+a:hover .fas {
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.logout {
+    position: absolute;
+    bottom: 0;
+}
+
+.container {
+    display: flex;
+}
+
+/* /////--////////////////////////////----//////// */
+.Profile{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.coachProfile{
+    margin-right: 1%;
+    /* background: linear-gradient(-50deg, #f4f4f4,  #e9e9e9c8,  #f4f4f4);
+    backdrop-filter: blur(10px); */
+    padding: 1%;
+    width: 20%;
+    height: 60vh;
+    /* border: thick double #d79f03;
+    border-width: 4px 4px 4px 4px; */
+}
+
+.imageprofile {
+    display: flex;
+    flex-direction: column;
+}
+.imageprofile h3{
+    padding: 4%;
+    display: inline;
+    text-align: center;
+    font-size: 160%;
+    background: linear-gradient(-50deg, #f4f4f4,  #e9e9e9c8,  #f4f4f4);
+    backdrop-filter: blur(10px);
+}
+.imageprofile img{
+    /* margin-top:-5% ; */
+    /* border: 30px solid #f4f4f4 ; */
+    background: linear-gradient(-50deg, #f4f4f4,  #e9e9e9c8,  #f4f4f4);
+    backdrop-filter: blur(10px);
+    padding: 6%;
+
+}
+
+.imageprofile .line {
+    margin: 9% 0%;
+    width: 100%;
+    border: thick double #d79f03;
+    border-width: 3px 0px 0px 0px;
+}
+
+
+.CoachDetails{
+    margin: -3% 0% 0% 0%;
+    background: linear-gradient(-50deg, #f4f4f4,  #e9e9e9c8,  #f4f4f4);
+    backdrop-filter: blur(10px);
+
+    padding: 1%;
+    width: 40%;
+    height: 50vh;
+    border: thick double #d79f03;
+    border-width: 5px 5px 5px 5px;
+
+}
+.edi{
+    margin-left: 2%;
+    padding: 2px;
+    color: #d79f03;
+    background-color: #323232;
+    border-radius: 20%;
+}
+#savebutton{
+    margin-left: 2%;
+    padding: 2px;
+    color: #d79f03;
+    background-color: #323232;
+    border-radius: 20%;
+}
+.CoachDetails h3{
+    text-align: center;
+    padding: 2%;
+    font-size: 150%;
+}
+.CoachDetails .line2{
+    margin: 0% auto;
+    width: 90%;
+    border: thick double #3f3f3f;
+    border-width: 3px 0px 0px 0px;
+}
+
+.textAboutMe{
+    text-align: center;
+    
+}
+
+
+.textAboutMe .line{
+    margin: 0% auto;
+    width: 40%;
+    border: thick double #111111;
+    border-width: 3px 0px 0px 0px;
+}
+.textAboutMe p{
+    padding: 2%;
+}
+
+.inpbio{
+    margin: 3% auto;
+    height: 10vh;
+    width: 80%;
+}
+.hidetbio{
+    display: none;
+}
+.textemail{
+    padding: 4%;
+}
+
+.textemail span{
+    font-weight: 15;
+}
+.textphone span{
+    font-weight: 15;
+}
+.textphone{
+    padding: 2%;
+    font-size: 90%;
+
+}
+/* ///-- footer --//// */
+.footer{
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 12vh;
+    background-color: #031012;
+  box-shadow: 0 0 40px rgb(244, 235, 205);
+  opacity: 0.8;
+    backdrop-filter: blur(10px);
+}
+.support{
+
+    padding-top: 1%;
+}
+
+
+.fa-square-phone{
+    padding-left: 1%;
+}
+
+.fa-envelope {
+    padding-left: 1%;
+    
+}
+
+.support #at{
+    color: #efc437;
+}
+.logo img{
+    /* margin-right:5px ; */
+    width: 70px;
+    height: 70px;
+    border-radius:50%;
+  }
+/* ////////// */
+
+ 
+
+@media (max-width:992px){
+    .Profile{
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        /* height: 60vh; */
+        width: 110%;
+        justify-content: center;
+    align-items: center;
+    }
+
+    nav:hover {
+        width: 0px;
+        transition: 1s;
+    }
+    .CoachDetails{
+        margin: 0% auto;
+
+    }
+    .coachProfile{
+        margin: 10% auto 0%;
+        width: 40%;
+
+    }
+}    
+
+@media (max-width:768px){
+    .Profile{
+        margin: 0% auto;
+        display: flex;
+        flex-direction: column;
+        font-size: 40%;
+        height: 40vh;
+        width: 110%;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    nav:hover {
+        width: 0px;
+        transition: 1s;
+    }
+}
+
+/* @media (max-width:576px){
+    nav:hover {
+        width: 0px;
+        transition: 1s;
+    }
+} */

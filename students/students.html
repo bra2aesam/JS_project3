@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./students.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <link rel="icon" href="../img/logo.png">
+<title> Students</title>
+</head>
+<body>
+
+    <!-- //////////////////////////////////////////Sid Navbar-item/////////////////////////////////////////////////// -->
+  <div class="container">
+
+    <nav>
+      <ul>
+        <li><a href="#" class="logo">
+          <img src="" id="image1">
+          <span class="nav-item" id="namee"></span>
+        </a></li>
+
+        <li><a href="#" id="home" onclick="move(id)">
+       
+          <i class="fas fa-solid fa-house-user"></i>
+          <span class="nav-item">Home page</span>
+        </a></li>
+
+        <li><a href="#" id="profile" onclick="move(id)">
+          <!-- <i class="fas fa-comment"></i> -->
+          <i class="fas fa-solid fa-user"></i>
+
+          <span class="nav-item">My Profile</span>
+        </a></li>
+
+        <li><a href="#" id="student" onclick="move(id)">
+          <i class="fas fa-solid fa-list-check"></i>
+          <span class="nav-item">Attendance</span>
+        </a></li>
+
+        <li><a href="#" id="feedback" onclick="move(id)">
+            <i class="fas fa-solid fa-comments"></i>
+          <span class="nav-item">Feadback</span>
+        </a></li>
+      </a></li>
+      <li id="" onclick="move(id)"><a href="../students/students.html">
+        <i class="fas fa-solid fa-graduation-cap"></i>
+        <span class="nav-item">Students</span>
+    </a></li>
+    
+        <!-- <li><a href="#">
+          <i class="fas fa-cog"></i>
+          <span class="nav-item">Setting</span>
+        </a></li> -->
+
+        <li id="out" onclick="move(id)"><a href="#" class="logout">
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="nav-item">Log out</span>
+        </a></li>
+      </ul>
+    </nav>
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <section class="main">
+      <div class="main-top">
+
+
+      </div>
+      <!-- <div class="users">
+        <div class="card">
+          <img src=""> 
+          <h4>Alaa</h4>
+          <p>Cotche</p>
+          <button>Profile</button>
+        </div>
+
+        <div class="card">
+          <img src="">
+          <h4>Mona</h4>
+          <p>Cotche</p>
+          <button>Profile</button>
+        </div>
+      </div> -->
+
+
+
+      <section class="attendance">
+        <div class="attendance-list">
+
+          <h1> AQABA SECOND COHORT STUDENTS</h1>
+        </div>
+        <div class="edit_box attendance-list">
+            <button class="add_button" type="button" onclick="Add_traine()">+Add traine</button>
+        </div>
+        <!-- <div id="date_head"><div id="daily_attendance_situ" class="date"></div>
+        <div id="daily_date" class="date"></div></div> -->
+        <div class="attendance-list" id="table_container">
+        </div>
+          <!-- <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Task<br><span class="Completed_green">Completed</span> / <span class="missd_red">missd</span></th>
+                <th>Attendance</th>
+                <th>phone num</th>
+                <th>phone num</th> -->
+                <!-- <th>date</th> -->
+                <!-- <th>Details</th> -->
+              <!-- </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td>Karam hatem</td>
+                <td>Design</td>
+                <td>03-24-22</td> -->
+                <!-- <td>8:00AM</td>
+                <td>3:00PM</td> -->
+                <!-- <td><button>View</button></td> -->
+                <!-- <td><button>Attendance</button></td>
+                <td><button>Absence</button></td> -->
+              <!-- </tr>
+
+              <tr class="active">
+                <td>02</td>
+                <td>Anas yassen </td>
+                <td>Coding</td>
+                <td>03-24-22</td> -->
+                <!-- <td>9:00AM</td>
+                <td>4:00PM</td> -->
+                <!-- <td><button>View</button></td> -->
+                <!-- <td><button>Attendance</button></td>
+                <td><button>Absence</button></td> -->
+              <!-- </tr>
+
+              <tr>
+                <td>03</td>
+                <td>Baraa</td>
+                <td>testing</td>
+                <td>03-24-22</td> -->
+                <!-- <td>8:00AM</td>
+                <td>3:00PM</td> -->
+                <!-- <td><button>View</button></td> -->
+                <!-- <td><button>Attendance</button></td>
+                <td><button>Absence</button></td> -->
+              <!-- </tr>
+
+              <tr class="active" >
+                
+                <td>04</td>
+                <td>Asem yassen</td>
+                <td>Design</td>
+                <td>03-24-22</td> -->
+                <!-- <td>8:00AM</td>
+                <td>3:00PM</td> -->
+                <!-- <td><button>View</button></td> -->
+                <!-- <td><button>Attendance</button></td>
+                <td><button>Absence</button></td> -->
+              <!-- </tr>
+
+              <tr>
+                <td>05</td>
+                <td>Hanine</td>
+                <td>40/5</td>
+                <td>03-24-22</td> -->
+                <!-- <td>9:00AM</td>
+                <td>4:00PM</td> -->
+                <!-- <td><button>View</button></td> -->
+                <!-- <td><button>Attendance</button></td>
+                <td><button>Absence</button></td> -->
+              <!-- </tr> -->
+
+              <!-- <tr>
+                <td>06</td>
+                <td>Tara Smith</td>
+                <td>Testing</td>
+                <td>03-24-22</td>
+                <td>9:00AM</td>
+                <td><button>View</button></td>
+              </tr> -->
+
+            <!-- </tbody> -->
+          <!-- </table> -->
+        
+      </section>
+    </section>
+  </div>
+  <div class="footer">
+    <div class="support">
+      <span>contact support:</span>
+      <i class="fa-solid fa-square-phone"></i> +9627777777 & <i class="fa-solid fa-envelope"></i>   coachtick@gmail.com
+    <p>Copyright <span id="at">@CoachTick </span> all right reserved</p>
+  </div>
+  </div>
+  <!-- /////////////////// -->
+  
+  <script>
+    function regis() {
+      window.location.href = "./register/register.html"
+    }
+  </script>
+  </body>
+  </html>
+<script src="./students.js"></script>
+</body>
+</html>
